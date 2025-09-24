@@ -37,14 +37,17 @@ h1 {
   filter: hue-rotate(40deg);
 } */
 .warning-signs {
+  /* width: max-content; */
+  /* overflow: hidden; */
   display: flex;
   justify-content: space-around;
 }
 .warning {
   font-weight: 500;
   color: rgb(248, 195, 95);
-  animation: left-move infinite linear 10s;
+  animation: scroll-left 15s linear infinite;
   text-align: right;
+  white-space: nowrap;
 }
 
 .progress-line {
@@ -135,6 +138,7 @@ h1 {
   height: 2rem;
   display: block;
   position: absolute;
+  width: 60%;
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
@@ -170,7 +174,10 @@ h1 {
   }
 }
 @keyframes left-move {
+  from {
+    transform: translateX(0);
+  }
   to {
-    translate: calc(-5 * 25rem);
+    transform: translateX(-50%);
   }
 }
