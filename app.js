@@ -24,3 +24,4 @@ const displayTemps = (celsius) => {
 converButton.addEventListener("click", () => {
   displayTemps(celsiusInput.value);
 });
+displayTemps(30);
